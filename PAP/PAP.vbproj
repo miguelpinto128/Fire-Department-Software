@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E341CAC-B752-4F29-ABE0-F7FF43296234}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>PAP.My.MyApplication</StartupObject>
+    <RootNamespace>PAP</RootNamespace>
+    <AssemblyName>PAP</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>PAP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>PAP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>C:\xampplite\MySql.Data.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="form.Designer.vb">
+      <DependentUpon>form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_adicionar_stock.Designer.vb">
+      <DependentUpon>form_adicionar_stock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_adicionar_stock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_bombeiros.Designer.vb">
+      <DependentUpon>form_bombeiros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_bombeiros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_camara.Designer.vb">
+      <DependentUpon>form_camara.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_camara.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_camara_utilizadores.Designer.vb">
+      <DependentUpon>form_camara_utilizadores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_camara_utilizadores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_contagem.Designer.vb">
+      <DependentUpon>form_contagem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_contagem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_criar_bombeiros.Designer.vb">
+      <DependentUpon>form_criar_bombeiros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_criar_bombeiros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_criar_ocorrencias.Designer.vb">
+      <DependentUpon>form_criar_ocorrencias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_criar_ocorrencias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_criar_socios.Designer.vb">
+      <DependentUpon>form_criar_socios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_criar_socios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_criar_Stock.Designer.vb">
+      <DependentUpon>form_criar_Stock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_criar_Stock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_criar_utilizador.Designer.vb">
+      <DependentUpon>form_criar_utilizador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_criar_utilizador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_criar_viaturas.Designer.vb">
+      <DependentUpon>form_criar_viaturas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_criar_viaturas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_diretorio.Designer.vb">
+      <DependentUpon>form_diretorio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_diretorio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_editar_bombeiro.Designer.vb">
+      <DependentUpon>form_editar_bombeiro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_editar_bombeiro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_editar_ocorrencias.Designer.vb">
+      <DependentUpon>form_editar_ocorrencias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_editar_ocorrencias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_editar_socios.Designer.vb">
+      <DependentUpon>form_editar_socios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_editar_socios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_editar_utilizador.Designer.vb">
+      <DependentUpon>form_editar_utilizador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_editar_utilizador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_editar_viaturas.Designer.vb">
+      <DependentUpon>form_editar_viaturas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_editar_viaturas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_googlemaps.Designer.vb">
+      <DependentUpon>form_googlemaps.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_googlemaps.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_login.Designer.vb">
+      <DependentUpon>form_login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_mapa_portugal.Designer.vb">
+      <DependentUpon>form_mapa_portugal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_mapa_portugal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_ocorrencias.Designer.vb">
+      <DependentUpon>form_ocorrencias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_ocorrencias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_recoprar_password.Designer.vb">
+      <DependentUpon>form_recoprar_password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_recoprar_password.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_socios.Designer.vb">
+      <DependentUpon>form_socios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_socios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_stock.Designer.vb">
+      <DependentUpon>form_stock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_stock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_viaturas.Designer.vb">
+      <DependentUpon>form_viaturas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_viaturas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="form.resx">
+      <DependentUpon>form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_adicionar_stock.resx">
+      <DependentUpon>form_adicionar_stock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_bombeiros.resx">
+      <DependentUpon>form_bombeiros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_camara.resx">
+      <DependentUpon>form_camara.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_camara_utilizadores.resx">
+      <DependentUpon>form_camara_utilizadores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_contagem.resx">
+      <DependentUpon>form_contagem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_criar_bombeiros.resx">
+      <DependentUpon>form_criar_bombeiros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_criar_ocorrencias.resx">
+      <DependentUpon>form_criar_ocorrencias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_criar_socios.resx">
+      <DependentUpon>form_criar_socios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_criar_Stock.resx">
+      <DependentUpon>form_criar_Stock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_criar_utilizador.resx">
+      <DependentUpon>form_criar_utilizador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_criar_viaturas.resx">
+      <DependentUpon>form_criar_viaturas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_diretorio.resx">
+      <DependentUpon>form_diretorio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_editar_bombeiro.resx">
+      <DependentUpon>form_editar_bombeiro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_editar_ocorrencias.resx">
+      <DependentUpon>form_editar_ocorrencias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_editar_socios.resx">
+      <DependentUpon>form_editar_socios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_editar_utilizador.resx">
+      <DependentUpon>form_editar_utilizador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_editar_viaturas.resx">
+      <DependentUpon>form_editar_viaturas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_googlemaps.resx">
+      <DependentUpon>form_googlemaps.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_login.resx">
+      <DependentUpon>form_login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_mapa_portugal.resx">
+      <DependentUpon>form_mapa_portugal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_ocorrencias.resx">
+      <DependentUpon>form_ocorrencias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_recoprar_password.resx">
+      <DependentUpon>form_recoprar_password.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_socios.resx">
+      <DependentUpon>form_socios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_stock.resx">
+      <DependentUpon>form_stock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_viaturas.resx">
+      <DependentUpon>form_viaturas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
